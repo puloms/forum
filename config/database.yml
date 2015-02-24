@@ -1,0 +1,20 @@
+default: &default
+  adapter: mysql2
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: forum_development
+  user: root
+  password: ''
+
+test:
+  <<: *default
+  database: forum_test
+
+production:
+  <<: *default
+  database: forum_production
+  user:
+  password:
